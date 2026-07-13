@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use("Agg")  # Non-GUI backend — required for server/cloud environments
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os

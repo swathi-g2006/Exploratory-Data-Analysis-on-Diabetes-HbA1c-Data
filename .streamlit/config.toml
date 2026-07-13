@@ -1,5 +1,9 @@
 [server]
 fileWatcherType = "none"
+headless = true
 
 [browser]
 gatherUsageStats = false
+
+[runner]
+magicEnabled = false

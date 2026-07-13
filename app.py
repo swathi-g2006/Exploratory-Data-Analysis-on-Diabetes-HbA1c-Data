@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use("Agg")  # Force non-GUI backend BEFORE any other matplotlib import
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px

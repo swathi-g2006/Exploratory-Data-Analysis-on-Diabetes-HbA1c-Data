@@ -1,11 +1,14 @@
-pandas>=2.0.0,<3.0.0
-numpy>=1.20.0,<2.0.0
-matplotlib>=3.8.0
-seaborn>=0.13.0
-jupyter>=1.0.0
-fpdf2>=2.7.9
-scipy>=1.11.0
-openpyxl>=3.1.2
-streamlit>=1.35.0
-plotly>=5.22.0
+# Core data science — exact pins for reproducible, crash-free builds
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.11.4
+matplotlib==3.8.4
+seaborn==0.13.2
 
+# File I/O
+openpyxl==3.1.2
+fpdf2==2.7.9
+
+# Streamlit + visualisation
+streamlit==1.35.0
+plotly==5.22.0
