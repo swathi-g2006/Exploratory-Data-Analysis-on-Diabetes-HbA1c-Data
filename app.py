@@ -28,6 +28,24 @@ st.markdown("""
                 padding: 20px; text-align: center; }
     .kpi-value { font-size: 2rem; font-weight: 700; color: #00d4ff; }
     .kpi-label { font-size: 0.9rem; color: #aaa; }
+    [data-testid="stMetric"] {
+        background: #1e2130;
+        border: 1px solid #30364a;
+        border-radius: 0.75rem;
+        padding: 1rem;
+    }
+    [data-testid="stMetricLabel"],
+    [data-testid="stMetricLabel"] * {
+        color: #cbd5e1 !important;
+    }
+    [data-testid="stMetricValue"],
+    [data-testid="stMetricValue"] * {
+        color: #f8fafc !important;
+    }
+    [data-testid="stMetricDelta"],
+    [data-testid="stMetricDelta"] * {
+        color: #67e8f9 !important;
+    }
 
     @media (max-width: 768px) {
         [data-testid="stMainBlockContainer"] {
@@ -46,8 +64,7 @@ st.markdown("""
         }
         [data-testid="stMetric"] {
             padding: 0.75rem;
-            border-radius: 0.5rem;
-            background: #1e2130;
+            border-radius: 0.65rem;
         }
         [data-testid="stDataFrame"] {
             font-size: 0.8rem;
