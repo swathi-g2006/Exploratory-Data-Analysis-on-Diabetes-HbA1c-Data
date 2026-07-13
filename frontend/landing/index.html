@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Exploratory Data Analysis on Diabetes HbA1c Data — Interactive dashboard and insights." />
+  <title>Diabetes HbA1c EDA | Data Analytics Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">🩸 HbA1c EDA</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="http://localhost:8501" class="btn-nav" target="_blank">Launch Dashboard →</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="badge">Data Analytics · Healthcare</span>
+      <h1>Exploring Diabetes<br/><span class="gradient-text">HbA1c Biomarker Data</span></h1>
+      <p>A comprehensive EDA revealing patterns, distributions, and correlations in real-world diabetes patient data.</p>
+      <div class="hero-actions">
+        <a href="http://localhost:8501" class="btn-primary" target="_blank">🚀 Launch Dashboard</a>
+        <a href="../../outputs/reports/EDA_Final_Report.pdf" class="btn-outline" download>📄 Download Report</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <!-- Animated SVG or chart screenshot -->
+      <div class="floating-card" id="kpi-card">
+        <div class="kpi"><span class="kpi-val">100K+</span><span class="kpi-lbl">Patient Records</span></div>
+        <div class="kpi"><span class="kpi-val">6.5%</span><span class="kpi-lbl">Avg HbA1c</span></div>
+        <div class="kpi"><span class="kpi-val">8</span><span class="kpi-lbl">Features Analyzed</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <h2>What This Project Covers</h2>
+    <div class="features-grid">
+      <div class="feature-card"><div class="icon">🧹</div><h3>Data Cleaning</h3><p>Missing values, duplicates, outliers handled with IQR & median imputation.</p></div>
+      <div class="feature-card"><div class="icon">📈</div><h3>Statistics</h3><p>Mean, median, skewness, kurtosis and IQR for every numeric feature.</p></div>
+      <div class="feature-card"><div class="icon">📊</div><h3>Visualizations</h3><p>Histograms, box plots, scatter plots, pie charts — all auto-generated.</p></div>
+      <div class="feature-card"><div class="icon">🔥</div><h3>Correlation</h3><p>Pearson correlation matrix heatmap with top feature-pair ranking.</p></div>
+      <div class="feature-card"><div class="icon">🤖</div><h3>Dashboard</h3><p>Interactive Streamlit app — filter, explore, download in your browser.</p></div>
+      <div class="feature-card"><div class="icon">📄</div><h3>PDF Report</h3><p>Auto-generated professional report with all charts and insights embedded.</p></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Built with 🐍 Python · Pandas · Seaborn · Streamlit</p>
+    <p>Diabetes HbA1c EDA Project · 2026</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
