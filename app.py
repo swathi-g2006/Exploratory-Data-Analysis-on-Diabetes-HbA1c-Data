@@ -178,7 +178,7 @@ def get_data():
     raw_path = os.path.join(os.path.dirname(__file__), 'data', 'raw', 'diabetes_hba1c_raw.csv')
     try:
         df = dl.load_data(raw_path)
-        df_cleaned = clean_pipeline(df)
+        df_cleaned = clean_pipeline(df).copy()
         if 'diabetes' in df_cleaned.columns:
             df_cleaned['diabetes_label'] = df_cleaned['diabetes'].map({0: 'Negative', 1: 'Positive'})
         return df_cleaned
