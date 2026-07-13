@@ -9,6 +9,6 @@ seaborn==0.13.2
 openpyxl==3.1.2
 fpdf2==2.7.9
 
-# Streamlit + visualisation — >=1.40.0 required for width='stretch' support
-streamlit>=1.40.0
+# Streamlit + visualisation — pin to 1.35.0 since we restored use_container_width
+streamlit==1.35.0
 plotly>=5.22.0
