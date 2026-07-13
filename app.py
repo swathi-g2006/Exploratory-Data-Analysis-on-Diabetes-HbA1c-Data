@@ -19,7 +19,89 @@ st.set_page_config(
 # ── Custom CSS ────────────────────────────────────────────────
 st.markdown("""
 <style>
-    [data-testid="stSidebar"] { background: #0f1117; }
+    /* ── Sidebar Layout & Styling ── */
+    [data-testid="stSidebar"] {
+        background-color: #0f172a !important; /* Premium Dark Slate */
+        border-right: 1px solid #1e293b !important;
+    }
+    
+    /* Ensure high contrast and readable text colors in sidebar */
+    [data-testid="stSidebar"] {
+        color: #cbd5e1 !important;
+    }
+    
+    /* Style Navigate Label */
+    [data-testid="stSidebar"] label[data-testid="stWidgetLabel"],
+    [data-testid="stSidebar"] label[data-testid="stWidgetLabel"] p {
+        color: #94a3b8 !important; /* Soft gray-blue */
+        font-weight: 600 !important;
+        font-size: 0.85rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    /* Style the main title */
+    [data-testid="stSidebar"] h1,
+    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] h3 {
+        color: #f8fafc !important;
+        font-weight: 700 !important;
+        font-size: 1.45rem !important;
+        padding-top: 1rem !important;
+        margin-bottom: 1.25rem !important;
+        border-bottom: 1px solid #1e293b !important;
+        padding-bottom: 0.75rem !important;
+    }
+
+    /* Style radio option wrappers as interactive buttons */
+    [data-testid="stSidebar"] div[role="radiogroup"] {
+        gap: 0.4rem !important;
+    }
+    
+    [data-testid="stSidebar"] div[role="radiogroup"] label {
+        background-color: #1e293b !important;
+        border: 1px solid #334155 !important;
+        border-radius: 8px !important;
+        padding: 10px 14px !important;
+        margin-bottom: 0.25rem !important;
+        cursor: pointer !important;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        display: flex !important;
+        align-items: center !important;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* Hover states for options */
+    [data-testid="stSidebar"] div[role="radiogroup"] label:hover {
+        background-color: #334155 !important;
+        border-color: #475569 !important;
+        transform: translateY(-1px) !important;
+    }
+    
+    /* Option text color inside button */
+    [data-testid="stSidebar"] div[role="radiogroup"] label p {
+        color: #e2e8f0 !important; /* High contrast text */
+        font-size: 0.95rem !important;
+        font-weight: 500 !important;
+        margin: 0 !important;
+    }
+
+    [data-testid="stSidebar"] div[role="radiogroup"] label:hover p {
+        color: #ffffff !important;
+    }
+
+    /* Selected state highlighting (Royal Blue highlight) */
+    [data-testid="stSidebar"] div[role="radiogroup"] label:has(input:checked) {
+        background-color: #2563eb !important; /* Premium Royal Blue */
+        border-color: #3b82f6 !important;
+        box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.25), 0 2px 4px -2px rgba(37, 99, 235, 0.25) !important;
+    }
+    
+    [data-testid="stSidebar"] div[role="radiogroup"] label:has(input:checked) p {
+        color: #ffffff !important;
+        font-weight: 600 !important;
+    }
     [data-testid="stMainBlockContainer"] {
         max-width: 1400px;
         padding: 2rem 2.5rem 3rem;
@@ -48,6 +130,15 @@ st.markdown("""
     }
 
     @media (max-width: 768px) {
+        [data-testid="stSidebar"] {
+            max-width: 280px !important;
+        }
+        [data-testid="stSidebar"] div[role="radiogroup"] label {
+            padding: 12px 14px !important;
+        }
+        [data-testid="stSidebar"] h1 {
+            font-size: 1.25rem !important;
+        }
         [data-testid="stMainBlockContainer"] {
             padding: 1rem 0.75rem 2rem;
         }
